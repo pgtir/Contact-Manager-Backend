@@ -1,0 +1,9 @@
+{
+    "name": "Anushka",
+    "phone": 9987629643,
+    "email" : "anu@123.io",
+     "category" : "personal",
+     "tags" : ["cooking", "dance", "movies"],
+     "notes" : "3 recipes remaining!",
+     "address": "New Delhi"
+}
