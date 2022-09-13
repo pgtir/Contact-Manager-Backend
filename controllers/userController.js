@@ -22,7 +22,6 @@ exports.getAllUsers = async (req, res) => {
       const user = await User.findById(req.params.id).select(" -__v").populate("contacts");
       const starredContacts = await Contact.find({user: req.params.id, category: "Starred"})
       const importantContacts = await Contact.find({user: req.params.id, category: "Important"})
-      // console.log("hu,user.groups.sort())
       res.status(200).json({
         status: "success",
         user : {

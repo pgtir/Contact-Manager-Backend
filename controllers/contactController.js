@@ -40,7 +40,6 @@ exports.getAllContacts = async (req, res) => {
         ]
       }
     } : {category})
-    console.log(search, category)
     const searchFilter = {
       $or : [{name: RegExp(search, 'i')}, {phone: { $regex: search }}]
     };
@@ -118,9 +117,6 @@ exports.updateContact = async (req, res) => {
 
 exports.updateMany = async (req, res) => {
   const arr = req.params.ids.split(",");
-  console.log(req.params.ids)
-  console.log(arr)
-  console.log(req.body)
   const filter = {
     _id: {
       $in: [
